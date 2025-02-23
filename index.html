@@ -10,11 +10,12 @@
             margin: 0;
             padding: 0;
             height: 100%;
+            background-color: #02AFE5;
         }
 
         .house-image {
             position: absolute;
-            bottom: 32%; 
+            bottom: 22%; 
             left: 50%;
             transform: translateX(-50%); 
             width: 10%; 
@@ -42,24 +43,26 @@
         }
 
         #myVideo {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
+            position: fixed;    /* Fixed position so the video stays in place */
+            top: 0;             /* Position the video flush with the top of the screen */
+            left: 0;            /* Ensure it stretches from the left */
+            width: 100%;        /* Make the video span the full width of the screen */
+            height: auto;       /* Allow height to adjust based on the aspect ratio */
+            object-fit: cover;  /* Ensure the video covers the screen without stretching */
+            z-index: 0;        /* Ensure the video is behind other elements */
         }
+
     </style>
 </head>
 
 <body>
-    <div id="grad3" style="text-align:center;"></div>
     <video autoplay muted loop id="myVideo">
-        <source src="rain.mp4" type="video/mp4">
-      </video>
-    <p>hello world</p>
+        <source src="back_clouds.mp4" type="video/mp4">
+    </video>
+  
 
-    <img src="house.png" alt="Icon" class="house-image" />
-    <img src = "hill.png" alt = "Icon" class = "hill-image"/>
+    <a href = home.html><img src="house.png" alt="Icon" class="house-image"/></a>
+    <img src = "hill_opaque.png" alt = "Icon" class = "hill-image"/>
     </div>
 </body>
 </html>
